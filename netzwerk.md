@@ -1,10 +1,12 @@
-# Netzwerk
+# 🌐 Netzwerk
 
-## ping
-Testet die Verbindung zu einem anderen Rechner.
+## 🔍 Netzwerk prüfen
+ip a                 # IP-Adresse anzeigen
+hostname             # Rechnername
+hostname -I          # IP kurz anzeigen
 
-## ip
-Zeigt IP-Adressen und Netzwerkinterfaces an.
+## 📡 Verbindung testen
+ping google.com      # Verbindung testen
 
-## hostname
-Zeigt den Rechnernamen an.
+## 🔌 Ports
+ss -tuln             # offene Ports anzeigen

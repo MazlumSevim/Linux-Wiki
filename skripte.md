@@ -1,7 +1,15 @@
-# Bash-Skripte
+# ⚙️ Bash-Skripte
 
-## Ausführen eines Skripts
+## 📝 Einfaches Skript
+#!/bin/bash
+echo "Hallo Linux-Wiki"
+
+## 🚀 Ausführen
 bash script.sh
 
-## Rechte setzen
+## 🔐 Rechte
 chmod +x script.sh
+
+## 🔁 Variable
+name="Schüler"
+echo "Hallo $name"

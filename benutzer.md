@@ -1,10 +1,12 @@
-# Benutzerverwaltung
+# 👤 Benutzerverwaltung
 
-## whoami
-Zeigt den aktuellen Benutzer.
+## 🔍 Infos anzeigen
+whoami   # aktueller Benutzer
+id       # Benutzer- und Gruppeninfo
 
-## id
-Zeigt Benutzer- und Gruppen-ID.
+## ➕ Benutzer
+sudo adduser name   # Benutzer erstellen
+sudo deluser name   # Benutzer löschen
 
-## adduser
-Erstellt einen neuen Benutzer.
+## 🔑 Rechte
+sudo apt update     # als Admin ausführen

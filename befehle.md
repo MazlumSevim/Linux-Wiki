@@ -1,10 +1,17 @@
-# Linux-Befehle
+# 🧠 Linux-Befehle
 
-## pwd
-Zeigt das aktuelle Verzeichnis an.
+## 📂 Navigation
+pwd        # aktuelles Verzeichnis
+ls         # Dateien anzeigen
+ls -la     # detailliert
+cd /home   # wechseln
+cd ..      # zurück
 
-## ls
-Listet Dateien und Ordner auf.
+## 📄 Dateien & Ordner
+touch datei.txt      # Datei erstellen
+mkdir ordner         # Ordner erstellen
+rm datei.txt         # Datei löschen
+rm -r ordner         # Ordner löschen
 
-## cd
-Wechselt das Verzeichnis.
+## 📖 Hilfe
+man ls               # Handbuch

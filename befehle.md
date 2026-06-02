@@ -1,114 +1,148 @@
-# Linux-Befehle
+# 💻 Linux-Befehle
 
 Diese Datei enthält wichtige Linux-Befehle für die tägliche Arbeit im Terminal.
 
-## ls
+## 📂 Verzeichnisse anzeigen
 
-Zeigt den Inhalt eines Verzeichnisses an.
+### `ls`
 
-Beispiele:
+Zeigt Dateien und Ordner an.
 
 ```bash
-ls
-ls -l
-ls -la
-cd
+ls          # zeigt Dateien und Ordner an
+ls -l       # zeigt Details wie Rechte, Größe und Datum
+ls -la      # zeigt auch versteckte Dateien an
+```
+
+## 📁 Verzeichnis wechseln
+
+### `cd`
 
 Wechselt in ein anderes Verzeichnis.
 
-Beispiele:
+```bash
+cd /etc     # wechselt in den Ordner /etc
+cd ~        # wechselt ins Home-Verzeichnis
+cd ..       # geht eine Ebene zurück
+```
 
-cd /etc
-cd ~
-cd ..
-pwd
+## 📍 Aktuellen Pfad anzeigen
 
-Zeigt das aktuelle Verzeichnis an.
+### `pwd`
 
-pwd
-mkdir
+```bash
+pwd         # zeigt den aktuellen Ordnerpfad an
+```
 
-Erstellt neue Verzeichnisse.
+## 🗂️ Ordner erstellen
 
-mkdir test
-mkdir projekt
-rmdir
+### `mkdir`
 
-Löscht leere Verzeichnisse.
+```bash
+mkdir test          # erstellt den Ordner test
+mkdir projekt       # erstellt den Ordner projekt
+```
 
-rmdir test
-cp
+## 📄 Datei erstellen
 
-Kopiert Dateien oder Ordner.
+### `touch`
 
-cp datei.txt backup.txt
-cp -r ordner ziel
-mv
+```bash
+touch datei.txt     # erstellt eine leere Datei
+```
 
-Verschiebt oder benennt Dateien um.
+## 📋 Dateien kopieren
 
-mv alt.txt neu.txt
-mv datei.txt /tmp
-rm
+### `cp`
 
-Löscht Dateien und Ordner.
+```bash
+cp datei.txt backup.txt     # kopiert eine Datei
+cp -r ordner ziel           # kopiert einen ganzen Ordner
+```
 
-rm datei.txt
-rm -r ordner
-touch
+## ✏️ Dateien verschieben oder umbenennen
 
-Erstellt eine leere Datei.
+### `mv`
 
-touch datei.txt
-cat
+```bash
+mv alt.txt neu.txt          # benennt eine Datei um
+mv datei.txt /tmp           # verschiebt eine Datei nach /tmp
+```
 
-Zeigt den Inhalt einer Datei an.
+## 🗑️ Dateien löschen
 
-cat datei.txt
-grep
+### `rm`
 
-Sucht nach einem bestimmten Text.
+```bash
+rm datei.txt        # löscht eine Datei
+rm -r ordner        # löscht einen Ordner mit Inhalt
+```
 
-grep "test" datei.txt
-grep -i "linux" datei.txt
-find
+## 🔍 Text suchen
 
-Sucht Dateien und Verzeichnisse.
+### `grep`
 
-find /home -name "*.txt"
-find /tmp -type f
-chmod
+```bash
+grep "test" datei.txt       # sucht das Wort test in der Datei
+grep -i "linux" datei.txt   # sucht ohne Groß- und Kleinschreibung
+```
 
-Ändert Dateiberechtigungen.
+## 🔎 Dateien suchen
 
-chmod 755 skript.sh
-chmod +x skript.sh
-chown
+### `find`
 
-Ändert den Besitzer einer Datei.
+```bash
+find /home -name "*.txt"    # sucht alle .txt-Dateien im Ordner /home
+find /tmp -type f           # sucht nur Dateien im Ordner /tmp
+```
 
-chown max datei.txt
-tar
+## 🔐 Rechte ändern
 
-Erstellt oder entpackt Archive.
+### `chmod`
 
-tar -czf archiv.tar.gz ordner
-tar -xzf archiv.tar.gz
-history
+```bash
+chmod 755 skript.sh         # setzt bestimmte Rechte
+chmod +x skript.sh          # macht ein Skript ausführbar
+```
 
-Zeigt bereits ausgeführte Befehle an.
+## 👤 Besitzer ändern
 
-history
-history | grep git
-alias
+### `chown`
 
-Erstellt eigene Befehlsabkürzungen.
+```bash
+sudo chown max datei.txt    # ändert den Besitzer der Datei
+```
 
-alias ll='ls -la'
-Pipes und Umleitungen
+## 📦 Archiv erstellen oder entpacken
 
-Ausgaben von Befehlen können weitergeleitet werden.
+### `tar`
 
-ls -la | grep ".txt"
-echo "Hallo" > datei.txt
-cat datei.txt >> ausgabe.txt
+```bash
+tar -czf archiv.tar.gz ordner    # erstellt ein Archiv
+tar -xzf archiv.tar.gz           # entpackt ein Archiv
+```
+
+## 🕘 Befehlsverlauf anzeigen
+
+### `history`
+
+```bash
+history                  # zeigt alte Befehle an
+history | grep git       # sucht git-Befehle im Verlauf
+```
+
+## ⚡ Abkürzungen erstellen
+
+### `alias`
+
+```bash
+alias ll='ls -la'        # erstellt eine Abkürzung für ls -la
+```
+
+## 🔗 Pipes und Umleitungen
+
+```bash
+ls -la | grep ".txt"        # filtert die Ausgabe nach .txt-Dateien
+echo "Hallo" > datei.txt    # schreibt Text in eine Datei
+cat datei.txt >> ausgabe.txt # hängt Inhalt an eine Datei an
+```

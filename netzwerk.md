@@ -1,87 +1,122 @@
-# Netzwerk
+# 🌐 Netzwerk
 
-Diese Datei enthält wichtige Linux-Befehle für die Netzwerkverwaltung und Fehleranalyse.
+Diese Datei enthält wichtige Linux-Befehle für Netzwerkverwaltung und Fehleranalyse.
 
-## ping
+## 📡 Verbindung testen
 
-Prüft, ob ein anderer Rechner oder eine Website erreichbar ist.
+### `ping`
 
-Beispiele:
+Prüft, ob ein anderer Rechner oder eine Webseite erreichbar ist.
 
 ```bash
-ping google.com
-ping 8.8.8.8
-ip
+ping google.com    # testet die Verbindung zu Google
+ping 8.8.8.8       # testet die Verbindung zu einer IP-Adresse
+```
 
-Zeigt Informationen zu Netzwerkschnittstellen und IP-Adressen an.
+## 🖥️ IP-Adresse anzeigen
 
-Beispiele:
+### `ip`
 
-ip a
-ip addr
-ip route
-hostname
+Zeigt Netzwerkinformationen an.
 
-Zeigt den Rechnernamen an.
+```bash
+ip a         # zeigt alle Netzwerkschnittstellen und IP-Adressen
+ip addr      # gleiche Funktion wie ip a
+ip route     # zeigt die Routing-Tabelle an
+```
 
-hostname
-nslookup
+## 🏷️ Rechnernamen anzeigen
 
-Fragt DNS-Informationen zu einer Domain ab.
+### `hostname`
 
-nslookup google.com
-nslookup openai.com
-traceroute
+```bash
+hostname     # zeigt den Namen des Computers an
+```
+
+## 🔍 DNS-Abfrage
+
+### `nslookup`
+
+Fragt Informationen über eine Domain ab.
+
+```bash
+nslookup google.com   # zeigt DNS-Informationen von Google
+nslookup openai.com   # zeigt DNS-Informationen von OpenAI
+```
+
+## 🛣️ Verbindungsweg anzeigen
+
+### `traceroute`
 
 Zeigt den Weg der Datenpakete bis zum Ziel.
 
-traceroute google.com
-ss
+```bash
+traceroute google.com   # zeigt die einzelnen Stationen bis Google
+```
+
+## 🔌 Netzwerkverbindungen anzeigen
+
+### `ss`
 
 Zeigt aktive Netzwerkverbindungen an.
 
-ss -t
-ss -tuln
-netstat
+```bash
+ss -t      # zeigt TCP-Verbindungen
+ss -tuln   # zeigt offene Ports und Verbindungen
+```
 
-Zeigt Netzwerkverbindungen und offene Ports an.
+## 📊 Netzwerkstatistik anzeigen
 
-netstat -tuln
-curl
+### `netstat`
+
+```bash
+netstat -tuln   # zeigt offene Ports und aktive Verbindungen
+```
+
+## 🌍 Webseiten abrufen
+
+### `curl`
 
 Ruft Daten von Webseiten oder APIs ab.
 
-curl google.com
-curl https://api.github.com
-wget
+```bash
+curl google.com              # lädt den Quelltext der Webseite
+curl https://api.github.com  # ruft Daten einer API ab
+```
 
-Lädt Dateien aus dem Internet herunter.
+## ⬇️ Dateien herunterladen
 
-wget https://example.com/datei.zip
-ssh
+### `wget`
+
+```bash
+wget https://example.com/datei.zip   # lädt eine Datei herunter
+```
+
+## 🔐 Verbindung zu einem Server
+
+### `ssh`
 
 Verbindet sich mit einem entfernten Rechner.
 
-ssh benutzer@server
-scp
+```bash
+ssh benutzer@server   # verbindet sich mit einem Server
+```
 
-Kopiert Dateien über das Netzwerk.
+## 📂 Dateien über Netzwerk kopieren
 
-scp datei.txt benutzer@server:/home/benutzer
-scp benutzer@server:/home/test.txt .
-dig
+### `scp`
 
-Zeigt detaillierte DNS-Informationen an.
+```bash
+scp datei.txt benutzer@server:/home/benutzer   # Datei auf Server kopieren
+scp benutzer@server:/home/test.txt .           # Datei vom Server herunterladen
+```
 
-dig google.com
-dig openai.com
-Netzwerk-Konfiguration anzeigen
-ip a
-ip route
-hostname
-DNS testen
-nslookup google.com
-dig google.com
-Verbindung testen
-ping google.com
-traceroute google.com
+## 📋 Zusammenfassung
+
+```bash
+ping google.com       # Verbindung testen
+ip a                  # IP-Adresse anzeigen
+hostname              # Rechnername anzeigen
+nslookup google.com   # DNS-Abfrage
+ssh benutzer@server   # Serververbindung
+```

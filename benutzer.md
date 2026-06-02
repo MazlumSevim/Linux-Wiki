@@ -1,87 +1,124 @@
-# Benutzerverwaltung
+# 👤 Benutzerverwaltung
 
 Diese Datei enthält wichtige Befehle zur Verwaltung von Benutzern und Gruppen unter Linux.
 
-## whoami
+## 🙋 Aktuellen Benutzer anzeigen
 
-Zeigt den aktuell angemeldeten Benutzer an.
+### `whoami`
 
 ```bash
-whoami
-id
+whoami      # zeigt den aktuell angemeldeten Benutzer an
+```
 
-Zeigt Informationen über einen Benutzer an.
+## 🆔 Benutzerinformationen anzeigen
 
-id
-id max
-users
+### `id`
 
-Zeigt aktuell angemeldete Benutzer an.
+```bash
+id          # zeigt Benutzer-ID und Gruppen an
+id max      # zeigt Informationen über den Benutzer max
+```
 
-users
-useradd
+## 👥 Angemeldete Benutzer anzeigen
 
-Erstellt einen neuen Benutzer.
+### `users`
 
-sudo useradd max
-sudo useradd -m max
-passwd
+```bash
+users       # zeigt aktuell angemeldete Benutzer an
+```
 
-Vergibt oder ändert ein Passwort.
+## ➕ Benutzer erstellen
 
-sudo passwd max
-passwd
-usermod
+### `useradd`
 
-Ändert Einstellungen eines Benutzers.
+```bash
+sudo useradd max      # erstellt den Benutzer max
+sudo useradd -m max   # erstellt Benutzer mit Home-Verzeichnis
+```
 
-sudo usermod -aG sudo max
-sudo usermod -l neuername altername
-userdel
+## 🔑 Passwort vergeben
 
-Löscht einen Benutzer.
+### `passwd`
 
-sudo userdel max
-sudo userdel -r max
-groupadd
+```bash
+sudo passwd max   # setzt Passwort für Benutzer max
+passwd            # ändert das eigene Passwort
+```
 
-Erstellt eine neue Gruppe.
+## ✏️ Benutzer ändern
 
-sudo groupadd entwickler
-groupdel
+### `usermod`
 
-Löscht eine Gruppe.
+```bash
+sudo usermod -aG sudo max     # fügt Benutzer zur sudo-Gruppe hinzu
+sudo usermod -l neuer alter   # ändert den Benutzernamen
+```
 
-sudo groupdel entwickler
-groups
+## ❌ Benutzer löschen
 
-Zeigt die Gruppen eines Benutzers an.
+### `userdel`
 
-groups
-groups max
-chown
+```bash
+sudo userdel max      # löscht den Benutzer
+sudo userdel -r max   # löscht Benutzer inklusive Home-Verzeichnis
+```
 
-Ändert den Besitzer einer Datei.
+## 👨‍👩‍👧‍👦 Gruppe erstellen
 
-sudo chown max datei.txt
-sudo chown max:max datei.txt
-chgrp
+### `groupadd`
 
-Ändert die Gruppe einer Datei.
+```bash
+sudo groupadd entwickler   # erstellt die Gruppe entwickler
+```
 
-sudo chgrp entwickler datei.txt
-sudo
+## 🗑️ Gruppe löschen
 
-Führt Befehle mit Administratorrechten aus.
+### `groupdel`
 
-sudo apt update
-sudo systemctl restart apache2
-Benutzerinformationen anzeigen
-whoami
-id
-groups
-Benutzer erstellen und Passwort vergeben
-sudo useradd -m max
-sudo passwd max
-Benutzer löschen
-sudo userdel -r max
+```bash
+sudo groupdel entwickler   # löscht die Gruppe entwickler
+```
+
+## 📋 Gruppen anzeigen
+
+### `groups`
+
+```bash
+groups       # zeigt die eigenen Gruppen an
+groups max   # zeigt Gruppen des Benutzers max an
+```
+
+## 👤 Besitzer ändern
+
+### `chown`
+
+```bash
+sudo chown max datei.txt      # ändert den Besitzer der Datei
+sudo chown max:max datei.txt  # ändert Besitzer und Gruppe
+```
+
+## 👥 Gruppe einer Datei ändern
+
+### `chgrp`
+
+```bash
+sudo chgrp entwickler datei.txt   # ändert die Gruppe einer Datei
+```
+
+## 🛡️ Administratorrechte nutzen
+
+### `sudo`
+
+```bash
+sudo apt update                # führt Befehl als Administrator aus
+sudo systemctl restart apache2 # startet einen Dienst neu
+```
+
+## 📌 Zusammenfassung
+
+```bash
+whoami     # aktueller Benutzer
+id         # Benutzerinformationen
+groups     # Gruppen anzeigen
+sudo       # Administratorrechte
+```

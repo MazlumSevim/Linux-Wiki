@@ -17,7 +17,7 @@ Dieses Wiki dient dazu, wichtige Linux-Grundlagen strukturiert zu dokumentieren 
 
 ## 📁 Projektstruktur
 
-
+```text
 linux-wiki/
 ├── README.md
 ├── befehle.md
